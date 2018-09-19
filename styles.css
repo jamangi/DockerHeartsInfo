@@ -25,10 +25,10 @@ article section {margin-bottom: 5%; padding-left: 2%;}
 article section h1 {margin-bottom: 3%;}
 article section p {padding-left: 3%;}
 
-#logo, #space, #topic1,
+#logo, #home, #topic1,
 #topic2, #topic3 {height: 100%; width: 20%; float: left; font-size: 200%;}
 #logo img {max-height: 100%; max-width: 100%;}
-#topic1, #topic2, #topic3, footer 
+#home, #topic1, #topic2, #topic3, footer 
 {
     color: lightgray;
     box-sizing: border-box;
