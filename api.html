@@ -29,11 +29,11 @@
               <summary>Nest API</summary>
               <br>
               <p><span class="api">create</span> - create new container/user pair</p>
-              <p>read - read data about a container (remaining_memory, has_heartfile, is_responding)</p>
-              <p>update - execute bash code within a container</p>
-              <p>destroy - shutdown and remove a container</p>
-              <p>push - send container image to DockerHub for storage</p>
-              <p>load - retrieve and instantiate container from DockerHub</p>
+              <p><span class="api">read</span> - read data about a container (remaining_memory, has_heartfile, is_responding)</p>
+              <p><span class="api">update</span> - execute bash code within a container</p>
+              <p><span class="api">destroy</span> - shutdown and remove a container</p>
+              <p><span class="api">push</span> - send container image to DockerHub for storage</p>
+              <p><span class="api">load</span> - retrieve and instantiate container from DockerHub</p>
             </details>
         </section>
         <section data-img="images/moby.png">
@@ -45,10 +45,10 @@
             <details>
               <summary>MBU API</summary>
               <br>
-              <p>create_character - adds a new character to the world and broadcasts the change</p>
-              <p>read_characters - returns information about characters matching the search query</p>
-              <p>update_character - change location of a character and broadcasts the change</p>
-              <p>delete_character - removes a character from the world and broadcasts the change</p>
+              <p><span class="api">create_character</span> - adds a new character to the world and broadcasts the change</p>
+              <p><span class="api">read_characters</span> - returns information about characters matching the search query</p>
+              <p><span class="api">update_character</span> - change location of a character and broadcasts the change</p>
+              <p><span class="api">delete_character</span> - removes a character from the world and broadcasts the change</p>
             </details>
         </section>
         <section data-img="images/moby.png">
@@ -60,10 +60,10 @@
             <details>
               <summary>Database API</summary>
               <br>
-              <p>create (user or script) - adds a new instance to storage</p>
-              <p>read (user or script) - returns an instance from storage</p>
-              <p>update (user or script) - alters the data fields of an instance</p>
-              <p>delete (user or script) - removes instance from storage</p>
+              <p><span class="api">create</span> (user or script) - adds a new instance to storage</p>
+              <p><span class="api">read</span> (user or script) - returns an instance from storage</p>
+              <p><span class="api">update</span> (user or script) - alters the data fields of an instance</p>
+              <p><span class="api">delete</span> (user or script) - removes instance from storage</p>
             </details>
         </section>
         <section data-img="images/moby.png">
@@ -75,13 +75,13 @@
             <details>
               <summary>User Interface</summary>
               <br>
-              <p>move - each click emits a message to the MBU for broadcasting the character's intent to move</p>
-              <p>talk - entering a message in the chat emits the text to the MBU for broadcasting to those nearby</p>
-              <p>make_script - designing a script emits a message to the MBU, which forwards the message to the Database for storage</p>
-              <p>drop_script - dropping a script emits a message to the MBU to apply that script to the map so that others may then collect it</p>
-              <p>collect_script - collecting a script emits a message resulting in the script being executed within the player's container, and then removed from the map and database</p>
-              <p>loot - when a player dies, their sac of scripts can be looted by others, which differs from collecting scripts in that looted scripts are not executed and can be used by the looter</p>
-              <p>buy - an AJAX request to buy a particular item, which will then be added to the user's inventory in the Database</p>
+              <p><span class="api">move</span> - each click emits a message to the MBU for broadcasting the character's intent to move</p>
+              <p><span class="api">talk</span> - entering a message in the chat emits the text to the MBU for broadcasting to those nearby</p>
+              <p><span class="api">make_script</span> - designing a script emits a message to the MBU, which forwards the message to the Database for storage</p>
+              <p><span class="api">drop_script</span> - dropping a script emits a message to the MBU to apply that script to the map so that others may then collect it</p>
+              <p><span class="api">collect_script</span> - collecting a script emits a message resulting in the script being executed within the player's container, and then removed from the map and database</p>
+              <p><span class="api">loot</span> - when a player dies, their sac of scripts can be looted by others, which differs from collecting scripts in that looted scripts are not executed and can be used by the looter</p>
+              <p><span class="api">buy</span> - an AJAX request to buy a particular item, which will then be added to the user's inventory in the Database</p>
             </details>
         </section>
     </article>
