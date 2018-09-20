@@ -5,7 +5,7 @@
     --lightblue: #42F2F7;
     --bluegreen: #498C8A;
     --browngreen: #4B6858;
-    
+
 
     --blue: #5386E4;
     --plum: #4C4B63;
@@ -18,8 +18,8 @@ body {height: 100%; background: var(--brown);}
 header{height: 10%; background: var(--plum);}
 main{height: 80%; background: var(--brown);}
 footer{height: 10%; background: var(--plum);}
-article {height: 100%; background: var(--blue); width: 60%; float:left;}
-aside {height: 100%; background: var(--palepink);   width: 40%; float: right;}
+article {height: 100%; background: var(--vanilla); width: 60%; float:left;}
+aside {height: 100%; background: var(--blue);   width: 40%; float: right;}
 article {overflow-y: scroll;}
 article section {margin-bottom: 5%; padding-left: 2%;}
 article section h1 {margin-bottom: 3%;}
@@ -28,7 +28,7 @@ article section p {padding-left: 3%;}
 #logo, #home, #topic1,
 #topic2, #topic3 {height: 100%; width: 20%; float: left; font-size: 200%;}
 #logo img {max-height: 100%; max-width: 100%;}
-#home, #topic1, #topic2, #topic3, footer 
+#home, #topic1, #topic2, #topic3, footer
 {
     color: lightgray;
     box-sizing: border-box;
@@ -44,10 +44,11 @@ width: 0%;
 height: 100%;
 vertical-align: middle;
 }
-aside img { 
+aside img {
 max-width: 95%; max-height: 99%; opacity: 0;
 transition: opacity 500ms; vertical-align: middle;
 }
 main:hover aside img {opacity: 1;}
 
 a{ text-decoration: none; color:white;}
+.center-img {text-align: center;}

@@ -1,0 +1,45 @@
+#sailor1 {
+  position: relative;
+  border: 1px solid red;
+  height: 25%;
+  max-height:50px;
+  width: 50%;
+  background: url(images/sailor1/material/sailor1_R0.png);
+  background-repeat: no-repeat;
+
+}
+
+@keyframes loiter {
+  0% {}
+  24% {background: url(images/sailor1/material/sailor1_R0.png);background-repeat: no-repeat;}
+
+  25% {background: url(images/sailor1/sailor1_walkright.gif);background-repeat: no-repeat;
+  left:0%;}
+  49% {background: url(images/sailor1/sailor1_walkright.gif);background-repeat: no-repeat;
+  left: 90%;}
+
+  50% {background: url(images/sailor1/material/sailor1_R0.png);background-repeat: no-repeat;}
+  74% {background: url(images/sailor1/material/sailor1_R0.png);background-repeat: no-repeat;}
+
+  75% {background: url(images/sailor1/sailor1_walkleft.gif);background-repeat: no-repeat;
+  left:90%;}
+  99% {background: url(images/sailor1/sailor1_walkleft.gif);background-repeat: no-repeat;
+  left:0%;}
+
+  100% {background: url(images/sailor1/material/sailor1_R0.png);background-repeat: no-repeat;}
+}
+
+#sailor1 {animation: loiter 40s ease-in infinite;}
+#sailor1{background-repeat: no-repeat;}
+
+/* ################################################################################  */
+
+#dog {
+  position: relative;
+  border: 1px solid blue;
+  height: 25%;
+  max-height:50px;
+  width: 50%;
+  background: url(images/sailor1/material/sailor1_R0.png);
+  background-repeat: no-repeat;
+}
