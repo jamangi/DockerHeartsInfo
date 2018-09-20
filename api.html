@@ -22,8 +22,19 @@
         <section data-img="images/moby.png">
             <h1>The Nest</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idem iste, inquam, de voluptate quid sentit? Sic consequentibus vestris sublatis prima tolluntur. Duo Reges: constructio interrete. Quis Aristidem non mortuum diligit? Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia; Quippe: habes enim a rhetoribus; Huius ego nunc auctoritatem sequens idem faciam. Itaque nostrum est-quod nostrum dico, artis est-ad ea principia, quae accepimus.
+                Every user in the game is tied to one docker container at a time, and the code they collect gets executed within their container. All of the containers in the game reside within a python application known as the <span style="color: darkred"> Nest</span>. The Nest allows us to manipulate containers at the application level, so we can create, destroy, and test within containers in response to the actions of our users. The Nest also has the ability to push containers to DockerHub whenever a user logs out, and also load containers from DockerHub whenever a user logs in. Docker Hearts is built upon the Nest.
             </p>
+            <br>
+            <details>
+              <summary>Nest API</summary>
+              <br>
+              <p>Create - create new container/user pair</p>
+              <p>Read - read data about a container (remaining_memory, has_heartfile, is_responding)</p>
+              <p>Update - execute bash code within a container</p>
+              <p>Destroy - shutdown and remove a container</p>
+              <p>Push - send container image to DockerHub for storage</p>
+              <p>Load - retrieve and instantiate container from DockerHub</p>
+            </details>
         </section>
         <section data-img="images/moby.png">
             <h1>Multiplayer Broadcasting Unit (MBU)</h1>
