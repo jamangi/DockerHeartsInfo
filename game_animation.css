@@ -1,6 +1,6 @@
 #sailor1 {
   position: relative;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 25%;
   max-height:50px;
   width: 50%;
@@ -29,17 +29,40 @@
   100% {background: url(images/sailor1/material/sailor1_R0.png);background-repeat: no-repeat;}
 }
 
-#sailor1 {animation: loiter 40s ease-in infinite;}
+#sailor1 {animation: loiter 40s ease infinite;}
 #sailor1{background-repeat: no-repeat;}
 
 /* ################################################################################  */
 
 #dog {
   position: relative;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   height: 25%;
   max-height:50px;
   width: 50%;
-  background: url(images/sailor1/material/sailor1_R0.png);
+  background: url(images/dog/dog_sleep.gif);
   background-repeat: no-repeat;
 }
+
+@keyframes awaken {
+  25% {background: url(images/dog/dog_sleep.gif);background-repeat: no-repeat;}
+  26% {background: url(images/dog/dog_wag.gif);background-repeat: no-repeat;}
+
+  49% {background: url(images/dog/dog_wag.gif);background-repeat: no-repeat;}
+  50% {background: url(images/dog/dog_walkright.gif);background-repeat: no-repeat;
+  left: 0%;}
+  60% {background: url(images/dog/dog_walkright.gif);background-repeat: no-repeat;
+  left: 90%;}
+
+  61% {background: url(images/dog/dog_sit.gif);background-repeat: no-repeat;}
+  80% {background: url(images/dog/dog_sit.gif);background-repeat: no-repeat;}
+
+  81% {background: url(images/dog/dog_walkleft.gif);background-repeat: no-repeat;
+    left: 90%;}
+  99% {background: url(images/dog/dog_walkleft.gif);background-repeat: no-repeat;
+    left: 0%;}
+  100% {background: url(images/dog/dog_sleep.gif);background-repeat: no-repeat;}
+}
+
+#dog {animation: awaken 80s ease-in infinite;}
+#dog {background-repeat: no-repeat;}
