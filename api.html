@@ -28,31 +28,61 @@
             <details>
               <summary>Nest API</summary>
               <br>
-              <p>Create - create new container/user pair</p>
-              <p>Read - read data about a container (remaining_memory, has_heartfile, is_responding)</p>
-              <p>Update - execute bash code within a container</p>
-              <p>Destroy - shutdown and remove a container</p>
-              <p>Push - send container image to DockerHub for storage</p>
-              <p>Load - retrieve and instantiate container from DockerHub</p>
+              <p><span class="api">create</span> - create new container/user pair</p>
+              <p>read - read data about a container (remaining_memory, has_heartfile, is_responding)</p>
+              <p>update - execute bash code within a container</p>
+              <p>destroy - shutdown and remove a container</p>
+              <p>push - send container image to DockerHub for storage</p>
+              <p>load - retrieve and instantiate container from DockerHub</p>
             </details>
         </section>
         <section data-img="images/moby.png">
             <h1>Multiplayer Broadcasting Unit (MBU)</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idem iste, inquam, de voluptate quid sentit? Sic consequentibus vestris sublatis prima tolluntur. Duo Reges: constructio interrete. Quis Aristidem non mortuum diligit? Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia; Quippe: habes enim a rhetoribus; Huius ego nunc auctoritatem sequens idem faciam. Itaque nostrum est-quod nostrum dico, artis est-ad ea principia, quae accepimus.
+                The <span style="color: darkred">MBU</span> is what allows players to interact in real time. Whenever a player sends a message to the MBU (move, talk, collect/drop script, buy, sell, etc), the message is broadcasted to the other connected clients. This relies on websockets, and differs from AJAX in that clients need not disconnect and reconnect in order to recieve the continuous updates.
             </p>
+            <br>
+            <details>
+              <summary>MBU API</summary>
+              <br>
+              <p>create_character - adds a new character to the world and broadcasts the change</p>
+              <p>read_characters - returns information about characters matching the search query</p>
+              <p>update_character - change location of a character and broadcasts the change</p>
+              <p>delete_character - removes a character from the world and broadcasts the change</p>
+            </details>
         </section>
         <section data-img="images/moby.png">
             <h1>Database</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idem iste, inquam, de voluptate quid sentit? Sic consequentibus vestris sublatis prima tolluntur. Duo Reges: constructio interrete. Quis Aristidem non mortuum diligit? Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia; Quippe: habes enim a rhetoribus; Huius ego nunc auctoritatem sequens idem faciam. Itaque nostrum est-quod nostrum dico, artis est-ad ea principia, quae accepimus.
+                The <span style="color: darkred">Database</span> contains all of the users and scripts that exist within the world of Docker Hearts. It differs from the Nest in that it specializes and is optimized for storing data, whereas the Nest is better used for testing scripts.
             </p>
+            <br>
+            <details>
+              <summary>Database API</summary>
+              <br>
+              <p>create (user or script) - adds a new instance to storage</p>
+              <p>read (user or script) - returns an instance from storage</p>
+              <p>update (user or script) - alters the data fields of an instance</p>
+              <p>delete (user or script) - removes instance from storage</p>
+            </details>
         </section>
         <section data-img="images/moby.png">
             <h1>User Interface</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idem iste, inquam, de voluptate quid sentit? Sic consequentibus vestris sublatis prima tolluntur. Duo Reges: constructio interrete. Quis Aristidem non mortuum diligit? Eorum enim omnium multa praetermittentium, dum eligant aliquid, quod sequantur, quasi curta sententia; Quippe: habes enim a rhetoribus; Huius ego nunc auctoritatem sequens idem faciam. Itaque nostrum est-quod nostrum dico, artis est-ad ea principia, quae accepimus.
+                The <span style="color: darkred">User Interface</span> is how a user interacts with the application. It transmits the user's actions to the MBU, which broadcasts them to other user interfaces connected on the network. It displays the events incoming from the MBU for the users, and defines their experience of the game.
             </p>
+            <br>
+            <details>
+              <summary>User Interface</summary>
+              <br>
+              <p>move - each click emits a message to the MBU for broadcasting the character's intent to move</p>
+              <p>talk - entering a message in the chat emits the text to the MBU for broadcasting to those nearby</p>
+              <p>make_script - designing a script emits a message to the MBU, which forwards the message to the Database for storage</p>
+              <p>drop_script - dropping a script emits a message to the MBU to apply that script to the map so that others may then collect it</p>
+              <p>collect_script - collecting a script emits a message resulting in the script being executed within the player's container, and then removed from the map and database</p>
+              <p>loot - when a player dies, their sac of scripts can be looted by others, which differs from collecting scripts in that looted scripts are not executed and can be used by the looter</p>
+              <p>buy - an AJAX request to buy a particular item, which will then be added to the user's inventory in the Database</p>
+            </details>
         </section>
     </article>
     <aside>
